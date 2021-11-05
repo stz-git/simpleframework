@@ -1,5 +1,7 @@
 package com.imooc;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,22 @@ public class HelloServlet extends HttpServlet {
 
     public HelloServlet() {
         super();
+    }
+
+    @Override
+    public void init() throws ServletException {
+        System.out.println("init");
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("destroy");
+    }
+
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("service");
+        doGet(req, resp);
     }
 
     @Override
