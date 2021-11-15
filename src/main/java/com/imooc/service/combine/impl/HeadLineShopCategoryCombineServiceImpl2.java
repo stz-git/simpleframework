@@ -13,7 +13,7 @@ import org.simpleframework.inject.annotation.Autowired;
 import java.util.List;
 
 @Service
-public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
+public class HeadLineShopCategoryCombineServiceImpl2 implements HeadLineShopCategoryCombineService {
     @Autowired
     private HeadLineService headLineService;
     @Autowired
